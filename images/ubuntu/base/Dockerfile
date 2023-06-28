@@ -1,4 +1,4 @@
-ARG ubuntuImage="ubuntu:18.04"
+ARG ubuntuImage="ubuntu:22.04"
 FROM $ubuntuImage
 
 # Fixes a Gradle crash while building for Android on Unity 2019 when there are accented characters in environment variables
@@ -27,7 +27,8 @@ RUN apt-get -q update \
  libxss1 \
  cpio \
  lsb-release \
- python \
+ gpg-agent \
+ python-is-python3 \
  python-setuptools \
  xvfb \
  xz-utils \
